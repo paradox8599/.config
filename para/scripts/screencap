@@ -26,7 +26,7 @@ for i in $@; do
         MODE=true
         break
     elif [[ $i =~ '^(-w|--window)$' ]]; then
-        img=$(hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1] \(.size[0]x\(.size[1])"' | grim -g - -)
+        img=$(hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | grim -g - -)
         MODE=true
         break
     elif [[ $i =~ '^(-f|--full)$' ]]; then
@@ -41,18 +41,19 @@ if ! $MODE; then
     exit
 fi
 
+echo step save
+
 for ((i=1;i<=$#;i++)); do
     ARG=$@[$i]
     if [[ $ARG =~ '^(-s|--save)$' ]]; then
         SAVE=$((i + 1))
-    else
     fi
 done
 
-echo $SAVE
 if [[ -z $SAVE ]]; then
     echo $img | wl-copy
 else
+    echo save
     ARG_OUT=$@[$SAVE]
     if [[ -z $ARG_OUT ]]; then
         DIR=~/Pictures/screenshots
