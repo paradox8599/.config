@@ -11,3 +11,6 @@ alias tn="tmux -u new -s"
 
 alias lg="lazygit"
 
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec hypr
+fi
