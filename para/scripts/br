@@ -1,0 +1,23 @@
+#!/bin/sudo zsh
+dir=/sys/class/backlight/intel_backlight/
+b_max=$(cat $dir/max_brightness)
+b_cur=$(cat $dir/actual_brightness)
+b_step=$(( $b_max / 100 ))
+
+if ! [[ "$1" =~ '^[+-]?[0-9]+$' ]]; then exit; fi
+
+val=$1
+sign=${val:0:1}
+
+if ! [[ "+-" == *$sign* ]]; then
+  val=$(( $val > 100 ? 100 : $val ))
+  echo $(($val * $b_step)) > $dir/brightness
+else
+  val=${val:1}
+  val=$(($val * $b_step))
+  res=$(($b_cur $sign $val))
+  res=$(($res > 0 ? $res : 0))
+  res=$(($res < $b_max ? $res : $b_max))
+  echo $res > $dir/brightness
+fi
+

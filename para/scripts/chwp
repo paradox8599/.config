@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cwd=$(pwd)
+cd /
+
+bg=$1
+
+if ! [[ -f $bg ]]; then
+  bg=$cwd/$1
+fi
+
+hyprctl hyprpaper wallpaper eDP-1,$bg
+cd $cwd
