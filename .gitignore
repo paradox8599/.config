@@ -1,0 +1,9 @@
+/*
+**/.gitignore
+**/.git
+!.gitignore
+!eww
+!hypr
+!kitty
+!tofi
+
