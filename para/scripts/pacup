@@ -1,0 +1,5 @@
+#!/bin/sh
+printf "$ \`pacman -Syu\` ... \n\n"
+sudo pacman -Syu
+printf "\n$ \`pkgfile --update\` ... \n\n"
+sudo pkgfile --update
