@@ -3,19 +3,35 @@
 swaylock \
     --ignore-empty-password \
     --screenshots \
-    --grace 5 \
+    --grace 0 \
     \
     --clock \
     --datestr '%a, %d/%m/%Y' \
     \
     --indicator \
-    --indicator-radius 250 \
-    --indicator-thickness 3 \
+    --indicator-radius 300 \
+    --indicator-thickness 9 \
     \
-    --ring-color '#93C0A4' \
-    --key-hl-color '#DCE2BD' \
-    --line-color '#00000000' \
-    --inside-color '#00000066' \
+    --key-hl-color '#da3e52' \
+    --separator-color '00000000' \
+    \
+    --ring-color '#96e6b3' \
+    --ring-clear-color '00000000' \
+    --ring-caps-lock-color '00000000' \
+    --ring-ver-color '00000000' \
+    --ring-wrong-color '00000000' \
+    \
+    --line-color '00000000' \
+    --line-clear-color '00000000' \
+    --line-caps-lock-color '00000000' \
+    --line-ver-color '00000000' \
+    --line-wrong-color '00000000' \
+    \
+    --inside-color '00000066' \
+    --inside-clear-color '00000000' \
+    --inside-caps-lock-color '00000000' \
+    --inside-ver-color '00000000' \
+    --inside-wrong-color '00000000' \
     \
     --effect-scale 0.25 \
     --effect-blur 9x9 \
