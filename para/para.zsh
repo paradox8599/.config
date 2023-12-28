@@ -3,6 +3,7 @@ export GHURL="git@github.com:paradox8599"
 alias vi="nvim"
 alias vim="nvim"
 
+alias yay="paru"
 alias lg="lazygit"
 
 alias tad="tmux -u attach -t default"
