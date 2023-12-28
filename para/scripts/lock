@@ -1,0 +1,24 @@
+#!/bin/sh
+# https://github.com/jirutka/swaylock-effects
+swaylock \
+    --ignore-empty-password \
+    --screenshots \
+    --grace 5 \
+    \
+    --clock \
+    --datestr '%a, %d/%m/%Y' \
+    \
+    --indicator \
+    --indicator-radius 250 \
+    --indicator-thickness 3 \
+    \
+    --ring-color '#93C0A4' \
+    --key-hl-color '#DCE2BD' \
+    --line-color '#00000000' \
+    --inside-color '#00000066' \
+    \
+    --effect-scale 0.25 \
+    --effect-blur 9x9 \
+    --effect-scale 4 \
+    \
+    --effect-vignette 0.6:1 \
