@@ -1,7 +1,10 @@
 #!/bin/sh
-# printf "$ \`pacman -Syu\` ... \n\n"
-# sudo pacman -Syu
-printf "$ \`paru -Syu\` ... \n\n"
+
+printf "\n\$ pacman -Syu \n"
+sudo pacman -Syu
+
+printf "\n\$ paru -Syu \n"
 paru -Syu
-printf "\n$ \`pkgfile --update\` ... \n\n"
+
+printf "\n\$ pkgfile --update \n"
 sudo pkgfile --update
