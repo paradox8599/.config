@@ -1,7 +1,7 @@
 #!/bin/sh
 
-./pacup
+pacup || exit
 
-rustup update
+rustup update || exit
 
-tldr -u
+tldr -u || exit

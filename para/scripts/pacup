@@ -1,10 +1,10 @@
 #!/bin/sh
 
 printf "\n\$ pacman -Syu \n"
-sudo pacman -Syu
+sudo pacman -Syu || exit
 
 printf "\n\$ paru -Syu \n"
-paru -Syu
+paru -Syu || exit
 
 printf "\n\$ pkgfile --update \n"
-sudo pkgfile --update
+sudo pkgfile --update || exit
