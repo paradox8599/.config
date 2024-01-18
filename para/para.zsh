@@ -6,6 +6,10 @@ alias vim="nvim"
 alias yay="paru"
 alias lg="lazygit"
 
+alias docker="sudo docker"
+alias dc="docker compose"
+alias ldk="sudo lazydocker"
+
 alias tad="tmux -u attach -t default"
 alias tnd="tmux -u new -s default"
 # alias t="tad || tnd"
